@@ -23,9 +23,9 @@ const audioPlayer: AudioPlayer = {
 const { AudioVolume, songDuration: duration, song, details } = audioPlayer;
 const { author } = details;
 
-console.log("Audio Volume:", AudioVolume);
-console.log("Song Duration:", duration);
-console.log("Song:", song);
-console.log("Author:", author);
+// console.log("Audio Volume:", AudioVolume);
+// console.log("Song Duration:", duration);
+// console.log("Song:", song);
+// console.log("Author:", author);
 
 export {};
