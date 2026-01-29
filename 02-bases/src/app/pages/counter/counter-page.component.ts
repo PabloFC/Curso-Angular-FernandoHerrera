@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: `
-    <h1>Counter {{ counter }}</h1>
-    <button (click)="increaseBy(10)">+1</button>
-  `,
+  selector: 'counter-page',
+  templateUrl: './counter-page.component.html',
+  styleUrl: './counter-page.component.css',
 })
 export class CounterPageComponent {
-  counter = 15;
+  counter = 10;
 
   increaseBy(value: number) {
     this.counter += value;
+  }
+
+  decreaseBy(value: number) {
+    this.counter -= value;
+  }
+
+  resetCounter() {
+    this.counter = 10;
   }
 }
