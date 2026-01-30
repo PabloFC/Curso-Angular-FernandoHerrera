@@ -8,7 +8,7 @@ export const routes: Routes = [
     component: CounterPageComponent,
   },
   {
-    path: '/hero',
+    path: 'hero',
     component: HeroPageComponent,
   },
 ];
