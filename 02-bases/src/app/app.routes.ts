@@ -11,4 +11,9 @@ export const routes: Routes = [
     path: 'hero',
     component: HeroPageComponent,
   },
+
+  {
+    path: '**', // si no se encuentra un path
+    redirectTo: '', // redirecciona a la pagina principal
+  },
 ];
