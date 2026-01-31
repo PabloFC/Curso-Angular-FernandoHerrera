@@ -9,18 +9,22 @@
   </div>
 
   <div class="col-12 col-sm-6">
-    <h3>Lista de personajes:</h3>
+    <h3>Lista de personajes Fuertes:</h3>
     <ul>
       @for (character of characters(); track character.id; let idx = $index) {
-        <li>
-          <span> {{ idx + 1 }} - {{ character.name }} </span>
-          <strong
-            [class.text-danger]="character.power > 9000"
-            [class.text-primary]="character.power < 9000"
-          >
-            {{ character.power }}
-          </strong>
-        </li>
+        @if (character.power > 500) {
+          <li>
+            <span> {{ idx + 1 }} - {{ character.name }} </span>
+            <strong
+              [class.text-danger]="character.power > 9000"
+              [class.text-primary]="character.power < 9000"
+            >
+              {{ character.power }}
+            </strong>
+          </li>
+        } @else {
+          <li><strong>El personaje tiene una fuerza menor que 500</strong></li>
+        }
       }
     </ul>
   </div>
