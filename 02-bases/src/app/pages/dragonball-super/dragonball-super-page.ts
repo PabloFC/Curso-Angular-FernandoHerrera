@@ -22,25 +22,14 @@ export class DragonballSuperPageComponent {
     { id: 2, name: 'Vegeta', power: 8000 },
   ]);
 
-  addCharacter() {
-    console.log(this.name(), this.power());
-
-    if (!this.name() || !this.power() || this.power() < 0) {
-      return;
-    }
-    const newCharacter: Character = {
-      id: this.characters().length + 1,
-      name: this.name(),
-      power: this.power(),
-    };
-
-    // this.characters().push(newCharacter);
-    this.characters.update((characters) => [...characters, newCharacter]);
-    this.resetFields();
+  addCharacter(character: Character) {
+    this.characters.update((list) => [...list, character]);
   }
 
-  resetFields() {
-    this.name.set('');
-    this.power.set(0);
-  }
+  // this.characters().push(newCharacter);
 }
+
+// resetFields() {
+//   this.name.set('');
+//   this.power.set(0);
+// }
