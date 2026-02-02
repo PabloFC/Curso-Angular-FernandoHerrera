@@ -23,7 +23,6 @@ export class CharacterAddComponent {
       power: this.power(),
     };
 
-    // this.characters().push(newCharacter);
     // this.characters.update((characters) => [...characters, newCharacter]);
     this.newCharacter.emit(newCharacter);
     this.resetFields();

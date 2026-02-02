@@ -2,11 +2,16 @@
 <hr />
 <section class="row">
   <div class="col12 col-sm-6">
-    <dragonball-character-app (newCharacter)="addCharacter($event)"></dragonball-character-app>
+    <dragonball-character-app
+      (newCharacter)="dragonballService.addCharacter($event)"
+    ></dragonball-character-app>
   </div>
 
   <div class="col-12 col-sm-6">
-    <dragonball-character-list listName="Listado de personajes" [characters]="characters()">
+    <dragonball-character-list
+      listName="Listado de personajes"
+      [characters]="dragonballService.characters()"
+    >
     </dragonball-character-list>
   </div>
 </section>
