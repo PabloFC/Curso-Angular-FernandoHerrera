@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { GifListItem } from './gif-list-item/gif-list-item';
-
+import { Component, input } from '@angular/core';
+import { GifListItemComponent } from './gif-list-item/gif-list-item';
 @Component({
   selector: 'gif-list',
   templateUrl: './gif-list.html',
-  imports: [GifListItem],
+  imports: [GifListItemComponent],
 })
-export class GifList {}
+export class GifListComponent {
+  gifs = input.required<string[]>();
+}
